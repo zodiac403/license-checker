@@ -384,7 +384,7 @@ describe('main tests', function() {
             assert.equal(result.start, path.resolve(path.join(__dirname, '../')));
         });
 
-        ['json', 'markdown', 'csv', 'summary'].forEach(function(type) {
+        ['json', 'markdown', 'csv'].forEach(function(type) {
             it('should disable color on ' + type, function() {
                 var def = {
                     color: undefined,
