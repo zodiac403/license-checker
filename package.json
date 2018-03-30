@@ -87,7 +87,7 @@
     "changes": "github-changes -o davglass -r license-checker",
     "contrib": "./scripts/contrib.js",
     "pretest": "eslint --fix .",
-    "test": "jenkins-mocha ./tests/*.js",
+    "test": "mocha ./tests/*.js",
     "posttest": "istanbul check-coverage"
   },
   "preferGlobal": true,
