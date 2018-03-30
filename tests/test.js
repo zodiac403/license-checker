@@ -637,6 +637,26 @@ describe('main tests', function() {
     
     });
 
+    describe('should include copyright statements when configured:', function(){
+        it('include copyright statement', function(done) {
+            checker.init({
+                start: path.join(__dirname, '../'),
+                customFormat: {
+                    copyright: '',
+                    email: false,
+                    licenseFile: false,
+                    licenseText: false,
+                    publisher: false
+                }
+            }, function(err, output) {
+                assert(output.hasOwnProperty('abbrev@1.0.9'), 'Check if the expected package still exists.');
+                assert.equal(output['abbrev@1.0.9'].copyright, 'Copyright (c) Isaac Z. Schlueter and Contributors');
+                done();
+            });
+
+        });
+    });
+
     describe('json parsing', function() {
     
         it('should parse json successfully (File exists + was json)', function() {
