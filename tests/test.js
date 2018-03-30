@@ -7,6 +7,10 @@ var assert = require('assert'),
     fs = require('fs');
 
 describe('main tests', function() {
+    
+    it('should run the tests', function() {
+        assert.fail('did run the test.');
+    });
 
     it('should load init', function() {
         assert.equal(typeof checker.init, 'function');
